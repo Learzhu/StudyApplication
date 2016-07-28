@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="1080.0">
+    <shape
+        android:innerRadiusRatio="9"
+        android:shape="ring"
+        android:thicknessRatio="4"
+        android:useLevel="false">
+        <solid android:color="@color/green" />
+
+        <padding android:top="20dp" />
+        <size
+            android:width="200dp"
+            android:height="200dp" />
+        <!--<stroke-->
+        <!--android:width="3dp"-->
+        <!--android:color="@color/common_action_bar_splitter"-->
+        <!--android:dashGap="4dp"-->
+        <!--android:dashWidth="2dp" />-->
+        <!--<gradient-->
+        <!--android:centerColor="@color/common_action_bar_splitter"-->
+        <!--android:endColor="@color/common_signin_btn_light_text_focused"-->
+        <!--android:gradientRadius="60dp"-->
+        <!--android:startColor="@color/green"-->
+        <!--android:type="radial" />-->
+        <!--<gradient-->
+        <!--android:angle="90"-->
+        <!--android:centerColor="@color/green"-->
+        <!--android:type="linear" />-->
+
+        <gradient
+            android:startColor="@color/green"
+            android:type="sweep" />
+    </shape>
+
+</rotate>
