@@ -7,21 +7,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity1">
+    tools:context=".MainActivity">
 
 
-    <com.learzhu.study.studyapplication.view.CustomView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorAccent"
-        android:orientation="vertical">
+    <!--<com.learzhu.study.studyapplication.view.CustomView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:orientation="vertical">-->
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="#aaa"
-            android:gravity="center_horizontal"
-            android:text="下拉"
-            android:textSize="32sp" />
-    </com.learzhu.study.studyapplication.view.CustomView>
+    <!--<TextView-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:background="#aaa"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="下拉"-->
+    <!--android:textSize="32sp" />-->
+    <!--</com.learzhu.study.studyapplication.view.CustomView>-->
+
+    <com.learzhu.study.studyapplication.view.CustomTextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="www.baidu.com" />
 </RelativeLayout>
