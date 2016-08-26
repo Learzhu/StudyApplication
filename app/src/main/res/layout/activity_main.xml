@@ -25,12 +25,19 @@
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:layout_centerInParent="true"
         android:foreground="@drawable/gradient"
         android:gravity="center"
         android:text="wwwwwkljfldjslkjflkdsjlsjfkdljl"
         android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/list_divider" />
 
     <TextView
         android:layout_width="match_parent"
