@@ -3,10 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/transpant"
     tools:context=".MainActivity">
 
 
@@ -25,9 +22,25 @@
     <!--android:textSize="32sp" />-->
     <!--</com.learzhu.study.studyapplication.view.CustomView>-->
 
-    <com.learzhu.study.studyapplication.view.CustomTextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="www.baidu.com" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:foreground="@drawable/gradient"
+        android:gravity="center"
+        android:text="wwwwwkljfldjslkjflkdsjlsjfkdljl"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/text"
+        android:background="@color/white" />
+
+    <!--<com.learzhu.study.studyapplication.view.CustomTextView-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:background="@color/colorPrimaryDark"-->
+    <!--android:text="www.baidu.com" />-->
 </RelativeLayout>

@@ -2,9 +2,11 @@ package com.learzhu.study.studyapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 
 import com.learzhu.study.studyapplication.activitys.ParcelableActivity;
+import com.learzhu.study.studyapplication.activitys.TagActivity;
 import com.learzhu.study.studyapplication.modle.Book;
 
 import java.lang.reflect.Array;
@@ -17,9 +19,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        testParcelable();
+//        testParcelable();
+        testTag();
     }
 
+    /**
+     * 测试 Parcel
+     */
     private void testParcelable() {
 //        Man man =Man.CREATOR;
         Book book = new Book();
@@ -40,6 +46,10 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(MainActivity.this, ParcelableActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    private void testTag() {
+        startActivity(new Intent(MainActivity.this, TagActivity.class));
     }
 
 }
