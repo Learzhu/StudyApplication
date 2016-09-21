@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.learzhu.study.studyapplication">
+          package="com.learzhu.study.studyapplication">
 
     <application
         android:allowBackup="true"
@@ -14,9 +14,9 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".activitys.BannerActivity">
@@ -34,7 +34,7 @@
         -->
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version"/>
 
         <activity android:name=".activitys.TextViewActivity">
 
@@ -45,8 +45,8 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".activitys.ImageViewActivity" />
-        <activity android:name=".activitys.CoordinatorActivity" />
+        <activity android:name=".activitys.ImageViewActivity"/>
+        <activity android:name=".activitys.CoordinatorActivity"/>
         <activity
             android:name=".activitys.ViewPagerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -58,8 +58,14 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".activitys.ParcelableActivity" />
-        <activity android:name=".activitys.TagActivity"></activity>
+        <activity android:name=".activitys.ParcelableActivity"/>
+        <activity android:name=".activitys.TagActivity"/>
+        <activity android:name=".fragment.FragmentTestActivity">
+        </activity>
+        <activity android:name=".fragment.ContentActivity">
+        </activity>
+        <activity android:name=".fragment.ListTitleActivity">
+        </activity>
     </application>
 
 </manifest>
