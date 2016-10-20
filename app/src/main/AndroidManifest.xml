@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.learzhu.study.studyapplication">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -65,6 +66,8 @@
         <activity android:name=".fragment.ContentActivity">
         </activity>
         <activity android:name=".fragment.ListTitleActivity">
+        </activity>
+        <activity android:name=".smalldatabases.RealmActivity">
         </activity>
     </application>
 

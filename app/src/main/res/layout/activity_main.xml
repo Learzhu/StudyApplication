@@ -73,5 +73,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Parcelable"/>
+
+        <Button
+            android:id="@+id/realm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realm"/>
     </LinearLayout>
 </RelativeLayout>

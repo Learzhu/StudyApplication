@@ -11,6 +11,7 @@ import com.learzhu.study.studyapplication.activitys.ParcelableActivity;
 import com.learzhu.study.studyapplication.activitys.TagActivity;
 import com.learzhu.study.studyapplication.fragment.FragmentTestActivity;
 import com.learzhu.study.studyapplication.modle.Book;
+import com.learzhu.study.studyapplication.smalldatabases.RealmActivity;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private Button tagBtn, parcelableBtn, fragmentBtn;
+    private Button tagBtn, parcelableBtn, fragmentBtn, realmBtn;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -36,6 +37,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         parcelableBtn.setOnClickListener(this);
         fragmentBtn = (Button) findViewById(R.id.fragment_btn);
         fragmentBtn.setOnClickListener(this);
+        realmBtn = (Button) findViewById(R.id.realm_btn);
+        realmBtn.setOnClickListener(this);
     }
 
     /**
@@ -81,6 +84,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 intent.putExtra(ARG_PARAM1, ARG_PARAM1);
                 intent.putExtra(ARG_PARAM2, ARG_PARAM2);
                 startActivity(intent);
+                break;
+            case R.id.realm_btn:
+                Intent intent1 = new Intent(MainActivity.this, RealmActivity.class);
+                startActivity(intent1);
                 break;
             default:
                 break;
