@@ -1,0 +1,22 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//apply from:"config.gradle"//可以给所有的moudle引入一个配置文件
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath "io.realm:realm-gradle-plugin:1.1.0"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()//引入远程仓库
+//        maven { url MAVEN_URL }//引入自己的私有maven仓库
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

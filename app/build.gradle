@@ -1,8 +1,19 @@
 apply plugin: 'com.android.application'
-
+//插件 决定是apk\aar\jar等
+/*下面的会限制很多Realm的方法使用*/
+//apply plugin: 'realm-android'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
+
+    // 此处注释保持默认打开，关闭后可使不严格的图片可以通过编译,但会导致apk包变大
+    //aaptOptions.cruncherEnabled = false
+    //aaptOptions.useNewCruncher = false
+
+//    packagingOptions {
+//        exclude 'META-INF/NOTICE.txt'// 这里是具体的冲突文件全路径
+//        exclude 'META-INF/LICENSE.txt'
+//    }
 
     defaultConfig {
         applicationId "com.learzhu.study.studyapplication"
@@ -10,11 +21,25 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+//        multiDexEnabled=true//65536问题
     }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']//重新配置路径
+//        }
+//    }
+
     buildTypes {
         release {
+//            // zipAlign优化
+//            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources false
+            // 混淆
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.releaseConfig
         }
     }
 

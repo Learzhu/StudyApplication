@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_realm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.learzhu.study.studyapplication.smalldatabases.RealmActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/create_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Realm"/>
+
+        <Button
+            android:id="@+id/query_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Query[Retrieve] From Realm"/>
+
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Realm"/>
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete From Realm"/>
+
+        <Button
+            android:id="@+id/create_contact_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Contact Realm"/>
+
+        <TextView
+            android:id="@+id/show_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Result"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
