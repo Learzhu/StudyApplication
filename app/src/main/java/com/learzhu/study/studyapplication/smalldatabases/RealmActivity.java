@@ -205,30 +205,30 @@ public class RealmActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    private void testCreateContact() {
-        mRealm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-                Contact mContact = realm.createObject(Contact.class);
-                mContact.setName("Lear");
-
-                Email mEmail = realm.createObject(Email.class);
-                mEmail.setEmail("lear@gmail.com");
-//                mEmail.email = "lear@gmail.com";
-                /*错误*/
-//                mContact.mEmails.add(mEmail);
-                mContact.getEmails().add(mEmail);
-
-//                Email mEmail1 = new Email();
-//                mEmail.setEmail("xxx@qq.com");
-////                mEmail1.email = "xxx@qq.com";
-//                Email mEmail2 = realm.copyToRealm(mEmail1);
-////                mContact.mEmails.add(mEmail2);
-//                mContact.getEmails().add(mEmail2);
-                showResultTv.setText("success create Contact");
-            }
-        });
-    }
+//    private void testCreateContact() {
+//        mRealm.executeTransaction(new Realm.Transaction() {
+//            @Override
+//            public void execute(Realm realm) {
+//                Contact mContact = realm.createObject(Contact.class);
+//                mContact.setName("Lear");
+//
+//                Email mEmail = realm.createObject(Email.class);
+//                mEmail.setEmail("lear@gmail.com");
+////                mEmail.email = "lear@gmail.com";
+//                /*错误*/
+////                mContact.mEmails.add(mEmail);
+//                mContact.getEmails().add(mEmail);
+//
+////                Email mEmail1 = new Email();
+////                mEmail.setEmail("xxx@qq.com");
+//////                mEmail1.email = "xxx@qq.com";
+////                Email mEmail2 = realm.copyToRealm(mEmail1);
+//////                mContact.mEmails.add(mEmail2);
+////                mContact.getEmails().add(mEmail2);
+//                showResultTv.setText("success create Contact");
+//            }
+//        });
+//    }
 
     /**
      * @param country

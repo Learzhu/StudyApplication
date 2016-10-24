@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jakewharton.scalpel.ScalpelFrameLayout;
 import com.learzhu.study.studyapplication.activitys.ParcelableActivity;
 import com.learzhu.study.studyapplication.activitys.TagActivity;
 import com.learzhu.study.studyapplication.fragment.FragmentTestActivity;
@@ -22,11 +23,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button tagBtn, parcelableBtn, fragmentBtn, realmBtn;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private ScalpelFrameLayout mScalpelFrameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (BuildConfig.DEBUG) {
+            /*测试环境的时候检测布局*/
+            View mView = getLayoutInflater().inflate(R.layout.activity_main, null);
+            /*只是在最外面加一层容器*/
+            mScalpelFrameLayout = new ScalpelFrameLayout(this);
+            mScalpelFrameLayout.addView(mView);
+            setContentView(mScalpelFrameLayout);
+        } else {
+            setContentView(R.layout.activity_main);
+        }
         initViews();
     }
 
