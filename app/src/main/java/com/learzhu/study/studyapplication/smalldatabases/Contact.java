@@ -29,17 +29,26 @@
 //        this.name = name;
 //    }
 //
+////    public RealmList<Email> getEmails() {
+//////        if (mEmails == null) {
+//////            return new RealmList<>();
+//////        }
+////        return mEmails;
+////    }
+//
+////    public void setEmails(RealmList<Email> emails) {
+//////        if (mEmails == null) {
+//////            mEmails = new RealmList<Email>();
+//////        }
+////        this.mEmails = emails;
+////    }
+//
+//
 //    public RealmList<Email> getEmails() {
-////        if (mEmails == null) {
-////            return new RealmList<Email>();
-////        }
 //        return mEmails;
 //    }
 //
 //    public void setEmails(RealmList<Email> emails) {
-////        if (mEmails == null) {
-////            mEmails = new RealmList<Email>();
-////        }
-//        this.mEmails = emails;
+//        mEmails = emails;
 //    }
 //}

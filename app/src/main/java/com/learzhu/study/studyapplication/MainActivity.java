@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +19,11 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+import hugo.weaving.DebugLog;
+import timber.log.Timber;
+
+import static android.os.Build.ID;
+
 public class MainActivity extends Activity implements View.OnClickListener {
 
     private Button tagBtn, parcelableBtn, fragmentBtn, realmBtn;
@@ -29,12 +35,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (BuildConfig.DEBUG) {
+        if (false) {
+//        if (BuildConfig.DEBUG) {
             /*测试环境的时候检测布局*/
             View mView = getLayoutInflater().inflate(R.layout.activity_main, null);
             /*只是在最外面加一层容器*/
             mScalpelFrameLayout = new ScalpelFrameLayout(this);
             mScalpelFrameLayout.addView(mView);
+            /*开启3D效果*/
+            mScalpelFrameLayout.setLayerInteractionEnabled(true);
+            /*显隐DrawViews*/
+            mScalpelFrameLayout.setDrawViews(true);
+            /*显隐 view ID*/
+            mScalpelFrameLayout.setDrawIds(true);
+            /*修改边框的颜色和阴影*/
+            mScalpelFrameLayout.setChromeColor(ContextCompat.getColor(getBaseContext(), R.color.colorAccent));
             setContentView(mScalpelFrameLayout);
         } else {
             setContentView(R.layout.activity_main);
@@ -86,7 +101,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tag_btn:
-                testTag();
+//                testTag();
+                testString(1);
                 break;
             case R.id.parcelable_btn:
                 testParcelable();
@@ -104,5 +120,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+    @DebugLog
+    private String testString(int x) {
+        Timber.tag("LifeCycles");//设置只能用一次的Tag
+        Timber.d("Activity Created");
+
+        //DebugTree 会帮你进行格式化输出
+        Timber.i("A button with ID %s was clicked to say '%s'.", R.id.tag_btn, "testString");
+        return "@DebugLog";
     }
 }

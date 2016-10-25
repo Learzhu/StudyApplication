@@ -19,6 +19,8 @@ import com.learzhu.study.studyapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import hugo.weaving.DebugLog;
+
 public class BannerActivity extends AppCompatActivity {
     /**
      * ViewPager中ImageView的容器
@@ -82,7 +84,7 @@ public class BannerActivity extends AppCompatActivity {
                     BannerActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            int newIndex = viewPager.getCurrentItem()+1;
+                            int newIndex = viewPager.getCurrentItem() + 1;
                             viewPager.setCurrentItem(newIndex);
                         }
                     });

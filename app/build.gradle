@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 //插件 决定是apk\aar\jar等
 /*下面的会限制很多Realm的方法使用*/
 //apply plugin: 'realm-android'
+/*打印参数*/
+apply plugin: 'com.jakewharton.hugo'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -24,9 +26,16 @@ android {
 //        multiDexEnabled=true//65536问题
     }
 
+    /*实测无效还是需要手动移动*/
 //    sourceSets {
 //        main {
-//            jniLibs.srcDirs = ['libs']//重新配置路径
+////            jniLibs.srcDirs = ['jniLibs']//重新配置路径
+////            jniLibs.srcDirs = ['libs']//重新配置路径
+//        }
+//    }
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs 'jniLibs'
 //        }
 //    }
 
@@ -61,12 +70,16 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:support-v4:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+    compile 'com.google.guava:guava:19.0'
     compile 'io.realm:realm-android:0.84.1'
-//    compile 'io.realm:realm-android:0.87.5'
-//    classpath "io.realm:realm-gradle-plugin:2.0.2"
-
+    //    compile 'io.realm:realm-android:0.87.5'
+    //    classpath "io.realm:realm-gradle-plugin:2.0.2"
     /*新增用于测试界面的 开源工具依赖*/
     compile 'com.jakewharton.scalpel:scalpel:1.1.2'
+    /*新增的帮助Log的类*/
+    compile 'com.jakewharton.timber:timber:2.7.1'
+
+    compile files('src/main/libs/alipaySingle-20160428.jar')
+    compile files('src/main/libs/weiboSDKCore_3.1.4.jar')
 }
 //compile 'com.google.guava:guava:14.0.1' // guava 14.0.1

@@ -7,6 +7,9 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.1'
         classpath "io.realm:realm-gradle-plugin:1.1.0"
+        /*打印方法返回值*/
+        /*打印方法的传参和返回值，甚至方法的执行时间*/
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
     }
 }
 
