@@ -64,22 +64,26 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
+    //    compile 'io.realm:realm-android:0.87.5'
+    //    classpath "io.realm:realm-gradle-plugin:2.0.2"
+    /*新增用于测试界面的 开源工具依赖*/
+    /*新增的帮助Log的类*/
+
+
+    compile files('src/main/libs/alipaySingle-20160428.jar')
+    compile files('src/main/libs/weiboSDKCore_3.1.4.jar')
+    /*万能的dialog*/
     compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.google.android.gms:play-services-appindexing:9.0.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:support-v4:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile 'com.google.guava:guava:19.0'
     compile 'io.realm:realm-android:0.84.1'
-    //    compile 'io.realm:realm-android:0.87.5'
-    //    classpath "io.realm:realm-gradle-plugin:2.0.2"
-    /*新增用于测试界面的 开源工具依赖*/
     compile 'com.jakewharton.scalpel:scalpel:1.1.2'
-    /*新增的帮助Log的类*/
     compile 'com.jakewharton.timber:timber:2.7.1'
-
-    compile files('src/main/libs/alipaySingle-20160428.jar')
-    compile files('src/main/libs/weiboSDKCore_3.1.4.jar')
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+    testCompile 'junit:junit:4.12'
 }
 //compile 'com.google.guava:guava:14.0.1' // guava 14.0.1

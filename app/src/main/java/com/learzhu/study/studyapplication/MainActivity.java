@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 
+import com.gitonway.lee.niftymodaldialogeffects.lib.Effectstype;
+import com.gitonway.lee.niftymodaldialogeffects.lib.NiftyDialogBuilder;
 import com.jakewharton.scalpel.ScalpelFrameLayout;
 import com.learzhu.study.studyapplication.activitys.ParcelableActivity;
 import com.learzhu.study.studyapplication.activitys.TagActivity;
@@ -22,6 +25,7 @@ import java.util.List;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
+import static android.R.attr.name;
 import static android.os.Build.ID;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -102,7 +106,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.tag_btn:
 //                testTag();
-                testString(1);
+//                testString(1);
+                testDialog();
                 break;
             case R.id.parcelable_btn:
                 testParcelable();
@@ -120,6 +125,45 @@ public class MainActivity extends Activity implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+    private void testDialog() {
+        final NiftyDialogBuilder dialogBuilder = NiftyDialogBuilder.getInstance(this);
+         /*弹出对话框*/
+        dialogBuilder
+                .withTitle("删除")
+                .withMessage(Html.fromHtml(new StringBuilder("确认删除").append("<font color=#f75842>").append(name).append("</font>").append("的对话？").toString()))
+                .withDuration(700)
+                .withEffect(Effectstype.Fadein)
+                .withButton1Text("确认")
+                .withButton2Text("取消")
+                .withDialogColor("#ffffffff")
+                .isCancelableOnTouchOutside(false)
+                .setCustomView(R.layout.activity_image_view, MainActivity.this)
+                .withButtonDrawable(R.drawable.btn_selector)
+                .setButton1Click(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+//                        boolean success = EMClient.getInstance().chatManager().deleteConversation(conversation.getUserName(), true);
+//                        if (success) {
+//                            Alert.Toast("删除成功");
+//                                    /*提示主界面刷新未读消息数目*/
+//                            ((MainActivity) getActivity()).showChatRecordsUnReadCount();
+//                        } else {
+//                            Alert.Toast("删除失败");
+//                        }
+//                        refreshConversationAndCountData();
+                        dialogBuilder.dismiss();
+                    }
+                })
+                .setButton2Click(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialogBuilder.dismiss();
+                    }
+                })
+                .show();
+
     }
 
     @DebugLog

@@ -8,5 +8,6 @@
     <color name="transpant">#00ffffff</color>
     <color name="transpantall">#00000000</color>
     <color name="endcolorAccent">#FF4081</color>
+    <color name="common_signin_btn_light_text_focused">#FF4081</color>
 
 </resources>

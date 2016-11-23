@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="line">
+       android:shape="line">
 
     <!--<padding-->
     <!--android:bottom="20dp"-->
@@ -8,16 +8,16 @@
 
     <size
         android:width="200dp"
-        android:height="200dp" />
+        android:height="200dp"/>
     <stroke
         android:width="2dp"
         android:color="@color/common_action_bar_splitter"
         android:dashGap="4dp"
-        android:dashWidth="2dp" />
+        android:dashWidth="2dp"/>
 
     <gradient
         android:centerColor="@color/common_action_bar_splitter"
-        android:endColor="@color/common_signin_btn_light_text_focused"
+        android:endColor="@color/common_google_signin_btn_text_dark_default"
         android:startColor="@color/green"
-        android:type="linear" />
+        android:type="linear"/>
 </shape>
