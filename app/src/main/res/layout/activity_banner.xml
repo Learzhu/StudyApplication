@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
@@ -18,4 +19,52 @@
         android:background="@color/colorAccent"
         android:gravity="center"
         android:orientation="horizontal"></LinearLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--&gt;-->
+
+    <!--<Button-->
+    <!--android:id="@+id/one"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:text="SSSS"-->
+    <!--tools:visibility="gone"></Button>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/two"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginRight="50dp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="SSSS"-->
+    <!--&gt;</Button>-->
+    <!--</RelativeLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center"
+            android:text="AAA"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_launcher"
+            android:gravity="center"
+            android:text="AAA"
+            tools:visibility="gone"/>
+    </LinearLayout>
 </FrameLayout>

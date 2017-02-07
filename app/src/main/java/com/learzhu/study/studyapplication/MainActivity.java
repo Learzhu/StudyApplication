@@ -53,6 +53,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             /*显隐 view ID*/
             mScalpelFrameLayout.setDrawIds(true);
             /*修改边框的颜色和阴影*/
+
             mScalpelFrameLayout.setChromeColor(ContextCompat.getColor(getBaseContext(), R.color.colorAccent));
             setContentView(mScalpelFrameLayout);
         } else {
